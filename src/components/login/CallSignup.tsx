@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/Button";
 
 export function CallSignup() {
@@ -10,7 +11,9 @@ export function CallSignup() {
         Don&#39;t have an account? Sign up
       </p>
 
-      <Button text="Sign Up" className="w-25  mb-4" />
+      <Link href="/login/signup">
+        <Button text="Sign Up" className="w-25  mb-4" />
+      </Link>
     </div>
   );
 }

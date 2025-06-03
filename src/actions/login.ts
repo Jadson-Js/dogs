@@ -1,13 +1,13 @@
 "use server";
 
 import { apiError } from "@/functions/apiError";
-import { TOKEN_POST } from "@/hooks/api";
+import { POST_TOKEN } from "@/hooks/api";
 import { cookies } from "next/headers";
 
 export async function login(state: unknown, formData: FormData) {
   const userName = formData.get("username") as string | FormDataEntryValue;
   const password = formData.get("password") as string | FormDataEntryValue;
-  const request = TOKEN_POST({ username: userName, password: password });
+  const request = POST_TOKEN({ username: userName, password: password });
 
   try {
     if (!userName || !password) throw new Error("Preencha os dados.");

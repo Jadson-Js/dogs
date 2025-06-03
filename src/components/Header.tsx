@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -11,7 +12,7 @@ export function Header() {
           height={22}
           priority
         />
-        <div className="flex flex-row gap-2">
+        <Link className="flex flex-row gap-2" href="/login">
           <p className="text-base text-gray-700">Login / Signup</p>
           <Image
             src={"/assets/user.svg"}
@@ -20,7 +21,7 @@ export function Header() {
             height={15}
             priority
           />
-        </div>
+        </Link>
       </div>
     </nav>
   );

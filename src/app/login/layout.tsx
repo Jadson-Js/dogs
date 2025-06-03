@@ -21,7 +21,7 @@ export default function RootLayout({
           className="object-cover"
         />
       </div>
-      <div>{children}</div>
+      <div className="py-24 px-4 md:px-16 max-w-xl">{children}</div>
     </div>
   );
 }
