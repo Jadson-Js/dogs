@@ -7,5 +7,5 @@ export default async function Home() {
     return <div className="text-center">No photos available</div>;
   }
 
-  return <Feed photos={data} className="py-24" />;
+  return <Feed photos={data} className="py-8" />;
 }

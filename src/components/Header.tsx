@@ -18,7 +18,10 @@ export function Header() {
           height={22}
           priority
         />
-        <Link className="flex flex-row gap-2" href="/login">
+        <Link
+          className="flex flex-row gap-2"
+          href={user ? "/profile" : "/login"}
+        >
           <p className="text-base text-gray-700">
             {user ? user.username : "Login / Signup"}
           </p>
